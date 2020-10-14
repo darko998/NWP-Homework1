@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <br><br><br><br><br>
+    <div class="card pa-5">
+        <div class="card-body">
+            <h5 class="card-title">User details</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Here you can choose user group.</h6>
+
+            <div class="row mt-5">
+                <div class="col">
+                    <p> First name: {{ firstName }} </p>
+                    <p> Last name: {{ lastName }}</p>
+
+                    <p *ngIf="groups.length < 1" class="no-groups">There is no groups. Enter new group on home page.</p>
+                    <select class="form-control" [(ngModel)]="chosenGroup" *ngIf="groups.length > 0">
+                        <option *ngFor="let group of groups" [value]="group.groupName">
+                            {{ group.groupName }}
+                        </option>
+                    </select>
+
+                    <button class="btn btn-dark mt-5" (click)="putUserInGroup()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

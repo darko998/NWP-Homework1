@@ -1,0 +1,9 @@
+.table {
+    min-width: 100% ;
+}
+
+.details,
+.edit,
+.delete {
+    width: 2%;
+}

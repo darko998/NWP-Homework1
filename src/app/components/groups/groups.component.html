@@ -1,0 +1,23 @@
+<div class="container">
+    <br><br><br><br><br><br><br>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Group name</th>
+                        <th scope="col" class="users">Users</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let group of groups">
+                        <td>{{ group.groupName }}</td>
+                        <td><button class="btn btn-outline-info"
+                                [routerLink]="['/groups', group.groupName, 'users']">Users</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

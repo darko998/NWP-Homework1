@@ -1,0 +1,13 @@
+<div class="card pa-5">
+    <div class="card-body">
+        <h5 class="card-title">Create new group</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Enter group name</h6>
+
+        <div class="row mt-5">
+            <div class="col">
+                <input type="text" class="form-control mb-3" placeholder="Group name" [(ngModel)]="groupName" />
+                <button class="btn btn-dark mt-5" (click)="createGroup()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
